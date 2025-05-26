@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('gereja.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    position: relative;
+}
+
+/* Overlay untuk mengurangi kecerahan */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Warna gelap transparan */
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Warna putih transparan untuk konten */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    background: #001f3f; /* Warna biru navy */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white; /* Warna teks putih agar kontras */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #004080; /* Biru navy lebih terang saat hover */
+    color: white;
+    transform: scale(1.05);
+}
